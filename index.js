@@ -90,7 +90,9 @@ const server = http.createServer((req, res) => {
     res.end('<h1>Page not found!</h1>');
   }
 });
-
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 // server.listen(8001, '127.0.0.1', () => {
 //   console.log('Listening to requests on port 8001');
 // });
