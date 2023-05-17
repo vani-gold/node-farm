@@ -93,6 +93,7 @@ const server = http.createServer((req, res) => {
 // app.listen(process.env.PORT || 3000, function(){
 //   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 // });
- server.listen(8001, '127.0.0.1', () => {
-   console.log('Listening to requests on port 8001');
- });
+ const port = process.env.PORT || 3009;
+server.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
